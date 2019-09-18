@@ -22,7 +22,7 @@ function oslo_start_cluster () {
 }
 
 function oslo_blackout_start () {
-    sudo iptables -I 1 INPUT -p tcp --sport 5672 --dport 5672 --j DROP
+    sudo iptables -I INPUT -p tcp --sport 5672 --dport 5672 --j DROP
 }
 
 function oslo_blackout_stop () {
